@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>my movie collections</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      .cyber-h {
+        display: block;
+      }
+      h1{
+       
+        font-size: 50px;
+        text-align: center;
+        color: #fdfdfe;
+        text-shadow: 0px 0px 5px #9c9595, 0px 0px 10px #b393d3, 0px 0px 10px #0e0e0e,
+        0px 0px 20px #000000;
+
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 30px;
+        margin: 20px;
+      }
+      
+      .grid-item {
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        border: 2px solid #0305678d;
+        border-radius: 5%;
+        background-color: #c0c1d7f5;
+        color: #fff;
+        
+      }
+      
+      .grid-item:hover {
+        transform: scale(1.05);
+      }
+      
+      .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .grid-item p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      .grid-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 129, 0.271);
+        opacity: 0;
+      }
+      
+      .grid-item:hover::before {
+        opacity: 0.5;
+      }
+      
+      .grid-item iframe {
+        width: 100%;
+        height: 100%;
+      }
+      
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var gridItems = document.querySelectorAll(".grid-item");
+      gridItems.forEach(function(item) {
+        item.addEventListener("click", function() {
+          var iframe = this.querySelector("iframe");
+          if (iframe) {
+            if (iframe.requestFullscreen) {
+              iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+              iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) {
+              iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+              iframe.msRequestFullscreen();
+            }
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+    <div>
+        <h1 class="cyber-h">My Movies collection</h1>
+    </div>
+
+  <div class="grid-container">
+    
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/315465-the-boy-and-the-beast-bakemono-no-ko#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=315465" width="100%" height="100%" frameborder="0"></iframe>
+        <p>The Boy and the Beast</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/372058#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=372058" width="100%" height="100%" frameborder="0"></iframe>
+        <p>Your name</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/568160#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=568160" width="100%" height="100%" frameborder="0"></iframe>
+        <p>Weathering with you</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/378064#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=378064" width="100%" height="100%" frameborder="0"></iframe>
+        <p>The silent voice : The movie</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/198375-kotonoha-no-niwa#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=198375" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The garden of words</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/12924-kumo-no-mukou-yakusoku-no-basho#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=12924" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Place Promised in Our Early Days (2004) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/476292#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=948713" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Maquia: When the Promised Flower Blooms (2018) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/4935#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=4935" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Howl's Moving Castle (2004) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/129#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=129" width="100%" height="100%" frameborder="0"></iframe>
+        <p>Spirited away</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/278-the-shawshank-redemption#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=278" width="100%" height="100%" frameborder="0"></iframe>
+        <p>The shawshank redemption</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/120-the-lord-of-the-rings-the-fellowship-of-the-ring#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=120" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Lord of the Rings: The Fellowship of the Ring (2001) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/121-the-lord-of-the-rings-the-two-towers#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=121" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Lord of the Rings: The Two Towers (2002) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/122-the-lord-of-the-rings-the-return-of-the-king#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=122" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Lord of the Rings: The Return of the King (2003) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/76600-avatar-the-way-of-water#" alt="  ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=76600" width="100%" height="100%" frameborder="0"></iframe>
+        <p>avatar 2 : the way of water (2022)</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/19995-avatar#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=19995" width="100%" height="100%" frameborder="0"></iframe>
+        <p>avatar 1 : capturing avatar (2010)</p>
+    </div>
+
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/27205-inception#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=27205" width="100%" height="100%" frameborder="0"></iframe>
+        <p>Inception (2010)</p>
+    </div>
+
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/550" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=550" width="100%" height="100%" frameborder="0"></iframe>
+        <p>The fight club (1999)</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/155-the-dark-knight#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=155" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Dark Knight (2008) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/272-batman-begins#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=272" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Batman Begins (2005) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/49026-the-dark-knight-rises#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=49026" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Dark Knight Rises (2012) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/24428-the-avengers#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=24428" width="100%" height="100%" frameborder="0"></iframe>
+        <p> The Avengers (2012) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/99861-avengers-age-of-ultron#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=99861" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Avengers: Age of Ultron (2015) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/271110-captain-america-civil-war# " alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=271110" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Captain America: Civil War (2016) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/299536-avengers-infinity-war#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=299536" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Avengers: Infinity War (2018) </p>
+    </div>
+
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/299534-avengers-endgame#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=299534" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Avengers: Endgame (2019)  </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/299536-avengers-infinity-war#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=299536" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Avengers: Infinity War (2018) </p>
+    </div>
+    <div class="grid-item">
+        <img src="https://www.themoviedb.org/movie/299536-avengers-infinity-war#" alt=" ">
+        <iframe id="iframe" src="https://www.2embed.to/embed/tmdb/movie?id=299536" width="100%" height="100%" frameborder="0"></iframe>
+        <p> Avengers: Infinity War (2018) </p>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <footer style="text-align: center; color: white; font-size: 15px">
+    <p>this site developed and maintained by &copy; alex19578 2023</p>
+
+  </footer>
+</body>
+</html>
